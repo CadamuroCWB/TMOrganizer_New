@@ -1,0 +1,84 @@
+/* TMCore/static/css/styles.css */
+:root {
+    --user-text-color: #535458 ; /* #54443c */
+    --user-bg-color: #c3c3c4; /* #a37566 */ 
+    --user-color: #81646b; /* #bcac94 */ 
+    --user-font-size-header: 24px;
+    --user-font-size-body: 16px;
+    --user-font-family: "Gill Sans Extrabold", sans-serif; /* Fonte padrão */
+}
+
+[data-bs-theme="outono"] {
+    --user-text-color: #54443c ; /* #54443c */
+    --user-bg-color: #d9c1b9; /* #a37566 */ 
+    --user-color: #81646b; /* #bcac94 */ 
+    --user-font-size-header: 24px;
+    --user-font-size-body: 16px;
+    --user-font-family: "Gill Sans Extrabold", sans-serif; /* Fonte padrão */
+}
+
+[data-bs-theme="inverno"] {
+    --user-text-color: #1f3579 ; /* #54443c */
+    --user-bg-color: #b2bcda; /* #a37566 */ 
+    --user-color: #6b69a4; /* #bcac94 */ 
+    --user-font-size-header: 24px;
+    --user-font-size-body: 16px;
+    --user-font-family: "Gill Sans Extrabold", sans-serif; /* Fonte padrão */
+}
+
+[data-bs-theme="primavera"] {
+    --user-text-color: #b02e7d ; /* #54443c */
+    --user-bg-color: #bcac94; /* #a37566 */ 
+    --user-color: #84ac5b; /* #bcac94 */ 
+    --user-font-size-header: 24px;
+    --user-font-size-body: 16px;
+    --user-font-family: "Gill Sans Extrabold", sans-serif; /* Fonte padrão */
+}
+
+[data-bs-theme="verao"] {
+    --user-text-color: #54443c ; /* #54443c */
+    --user-bg-color: #a37566; /* #a37566 */ 
+    --user-color: #eaaf52; /* #bcac94 */ 
+    --user-font-size-header: 24px;
+    --user-font-size-body: 16px;
+    --user-font-family: "Gill Sans Extrabold", sans-serif; /* Fonte padrão */
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--user-font-family);
+}
+
+body {
+    background-color: var(--user-bg-color); /* Cor de fundo cinza claro */
+    color: var(--user-text-color); /* Cor do texto cinza escuro */
+    font-family: var(--user-font-family);
+}
+
+.master_menu {
+    background-color: var(--user-color); /* Cor de fundo cinza claro */
+    color: var(--user-text-color); /* Cor do texto cinza escuro */
+    font-family: var(--user-font-family);
+    padding: 10px 0;
+}
+
+
+.container-tmorganizer {
+    background-color: var(--user-color);
+    color: var(--user-text-color);
+    font-family: var(--user-font-family);
+}
+
+.endpage-tmorganizer {
+    background-color: var(--user-color);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: var(--user-font-size-body);
+    letter-spacing: 0.106em;
+    color: var(--user-text-color);
+    font-family: var(--user-font-family);
+}

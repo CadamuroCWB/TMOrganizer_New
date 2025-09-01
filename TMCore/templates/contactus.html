@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block meta_keywords %}
+    contact, support, inquiries, Techno Mania
+{% endblock %}
+
+{% block content %}
+    {% load bootstrap5 %}
+    <div class="container">
+        <form method="post" action="{% url 'contactus' %}" class="form" autocomplete="off">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-outline-success">Enviar</button>
+            {% endbuttons %}
+        </form>
+    </div>
+{% endblock %}
