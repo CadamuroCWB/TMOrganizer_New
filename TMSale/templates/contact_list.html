@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap5 %}
+    {% buttons %}
+        <a href="{% url 'contact_create' %}" class="btn btn-outline-success">Adicionar</a>
+    {% endbuttons %}
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Apelido</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contact_info %}
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.cpf }}</td>
+                <td>{{ contact.alias }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.email }}</td>
+                <td>
+                {% buttons %}
+                        <a href="{% url 'contact_form' contact.id %}" class="btn btn-sm btn-outline-primary">Editar</a>
+                        <a href="{% url 'contact_confirm_delete' contact.id %}" class="btn btn-sm btn-outline-danger">Excluir</a>
+                {% endbuttons %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="7">Nenhum contato cadastrado.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

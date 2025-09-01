@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap5 %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-outline-primary">Incluir/Alterar</button>
+        <a href="{% url 'contact_list' %}" class="btn btn-outline-danger">Voltar sem gravar</a>
+    {% endbuttons %}
+</form>
+{% endblock %}
